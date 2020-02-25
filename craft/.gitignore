@@ -1,0 +1,12 @@
+#Ordner -erste Ebene -
+/.env
+/config
+/modules
+/storage
+/.idea
+/vendor
+
+.DS_Store
+*.example
+craft
+craft.bat
