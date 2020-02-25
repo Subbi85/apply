@@ -5,8 +5,15 @@
 /storage
 /.idea
 /vendor
+/web/vendor
+/web/mail
+/web/cpresources
 
+#Sonstige Dateien
 .DS_Store
 *.example
 craft
 craft.bat
+README.md
+.travis.yml
+/web/web.config
