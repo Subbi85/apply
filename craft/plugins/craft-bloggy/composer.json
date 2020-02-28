@@ -1,0 +1,32 @@
+{
+    "name": "schleyer/bloggy",
+    "description": "Blogging Plug in",
+    "version": "1.0.0",
+    "type": "craft-plugin",
+    "keywords": ["Backend Blog", "Infos for everyone"],
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "schleyer",
+        "homepage": "https://developer-website.tld"
+      }
+    ],
+    "support": {
+      "email": "email@developer-website.tld",
+      "issues": "https://github.com/developer/repo/issues?state=open",
+      "source": "https://github.com/developer/repo",
+      "docs": "https://github.com/developer/repo/blob/master/README.md"
+    },
+    "require": {
+      "craftcms/cms": "^3.1.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "schleyer\\bloggy\\": "src/"
+      }
+    },
+    "extra": {
+      "handle": "bloggy",
+      "name": "Bloggy"
+    }
+  }

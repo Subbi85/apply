@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8668a3119b4362c0fc56386e6b401cde",
+    "content-hash": "ded289eb6b3950c27c4ec83e953c638e",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1629,44 +1629,6 @@
             "time": "2018-11-22T18:33:57+00:00"
         },
         {
-            "name": "ls/prototype",
-            "version": "1.0.0",
-            "dist": {
-                "type": "path",
-                "url": "./plugins/craft-prototype",
-                "reference": "61c30fe382de7466218e8774629c71f6b2885e9a"
-            },
-            "require": {
-                "craftcms/cms": "^3.1.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "handle": "prototype",
-                "name": "LS-Prototype"
-            },
-            "autoload": {
-                "psr-4": {
-                    "schleyer\\bloggy\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "schleyer",
-                    "homepage": "https://developer-website.tld"
-                }
-            ],
-            "description": "Sandbox Plugin for Craft Sandbox",
-            "keywords": [
-                "Sandbox Plugin for Craft Sandbox"
-            ],
-            "support": {
-                "email": "email@developer-website.tld"
-            }
-        },
-        {
             "name": "marcusschwarz/lesserphp",
             "version": "v0.5.4",
             "source": {
@@ -2730,6 +2692,48 @@
             ],
             "description": "A polyfill for getallheaders.",
             "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
+            "name": "schleyer/bloggy",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "./plugins/craft-bloggy",
+                "reference": "ebeb554018261919b334c8f8ffd2d47831c91982"
+            },
+            "require": {
+                "craftcms/cms": "^3.1.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "handle": "bloggy",
+                "name": "Bloggy"
+            },
+            "autoload": {
+                "psr-4": {
+                    "schleyer\\bloggy\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "schleyer",
+                    "homepage": "https://developer-website.tld"
+                }
+            ],
+            "description": "Blogging Plug in",
+            "keywords": [
+                "Backend Blog",
+                "Infos for everyone"
+            ],
+            "support": {
+                "email": "email@developer-website.tld",
+                "issues": "https://github.com/developer/repo/issues?state=open",
+                "source": "https://github.com/developer/repo",
+                "docs": "https://github.com/developer/repo/blob/master/README.md"
+            }
         },
         {
             "name": "seld/cli-prompt",

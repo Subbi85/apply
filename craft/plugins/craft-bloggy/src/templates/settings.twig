@@ -1,0 +1,14 @@
+{# Settings Template #}
+{% import '_includes/forms' as forms %}
+
+{{ forms.lightswitchField({
+    label: "Einschalten?",
+    instructions: "Soll Bloggy ein- oder ausgeschaltet sein?",
+    name: "bloggyEnabled",
+    on: settings.bloggyEnabled,
+    first: true
+    })
+}}
+
+
+

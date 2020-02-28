@@ -1,0 +1,68 @@
+{# Back End Plug in Template #}
+
+{% extends '_layouts/cp' %}
+{% import '_includes/forms' as forms %}
+
+{% set title = 'Bloggy, the Blog Plugin' %}
+
+{# Content Block #}
+{% block content %}
+    {# Intro Tab #}
+    <div id="#intro">
+        {% set markdownText = craft.app.plugins.getPlugin("bloggy").settings.markdownText %}
+
+    </div>
+
+    {# Feedback Tab#}
+    <div id="feedback" >
+        FEEDBACK
+        <form action="" method="post">
+            {{ csrfInput() }}
+            {{ forms.hidden({
+                name: "action",
+                value: "bloggy/feedback/send"
+                })
+            }}
+            {# Namensfeld #}
+            {{ forms.textField({
+                label: "Namensfeld",
+                instructions: "Gib deinen Namen an? ",
+                name: "user",
+                value: "Lars",
+                placeholder: "Hier deinen Namen eintragen"
+                })
+            }}
+            {# Themenauswahl#}
+            {{ forms.selectField({
+                label: "Art deiner Anfrage",
+                name: "topic",
+                value: "",
+                options: {
+                    a: "Feedback",
+                    b: "Frage / Anregungen",
+                    c: "Sonstiges"
+                }
+                })
+            }}
+            {# Message Area #}
+            {{ forms.textareaField({
+                label: "Deine Nachricht an uns",
+                instructions: "Gib hier deine Nachricht an uns ein.",
+                name: "message",
+                value: "Testnachricht",
+                placeholder: "Deine Nachricht...",
+                rows: 5
+                })
+            }}
+            {# Datumsfeld#}
+            {{ forms.dateField({
+                name: "date",
+                instructions: "Gib das Datum an."
+                })
+            }}
+            <input type="submit" class="submit btn">
+        </form>
+    </div>
+
+
+{% endblock %}

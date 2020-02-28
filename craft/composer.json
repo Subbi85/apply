@@ -1,7 +1,7 @@
 {
   "require": {
     "craftcms/cms": "^3.4.0",
-    "ls/prototype": "^1.0",
+    "schleyer/bloggy": "^1.0",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "autoload": {
