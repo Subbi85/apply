@@ -1,0 +1,29 @@
+{
+    "name": "ls/prototype",
+    "description": "Sandbox Plugin for Craft Sandbox",
+    "version": "1.0.0",
+    "type": "craft-plugin",
+    "keywords": ["Sandbox Plugin for Craft Sandbox"],
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "schleyer",
+        "homepage": "https://developer-website.tld"
+      }
+    ],
+    "support": {
+      "email": "email@developer-website.tld"
+    },
+    "require": {
+      "craftcms/cms": "^3.1.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "schleyer\\bloggy\\": "src/"
+      }
+    },
+    "extra": {
+      "handle": "prototype",
+      "name": "LS-Prototype"
+    }
+  }

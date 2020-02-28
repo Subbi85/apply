@@ -1,6 +1,7 @@
 {
   "require": {
     "craftcms/cms": "^3.4.0",
+    "ls/prototype": "^1.0",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "autoload": {
@@ -19,5 +20,11 @@
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ]
+  },
+  "repositories": [
+    {
+    "type" : "path",
+    "url" : "./plugins/*"
   }
+]
 }

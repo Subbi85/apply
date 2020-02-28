@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c789b685772e7561a526e6eae70c163b",
+    "content-hash": "8668a3119b4362c0fc56386e6b401cde",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1627,6 +1627,44 @@
                 "single sign on"
             ],
             "time": "2018-11-22T18:33:57+00:00"
+        },
+        {
+            "name": "ls/prototype",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "./plugins/craft-prototype",
+                "reference": "61c30fe382de7466218e8774629c71f6b2885e9a"
+            },
+            "require": {
+                "craftcms/cms": "^3.1.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "handle": "prototype",
+                "name": "LS-Prototype"
+            },
+            "autoload": {
+                "psr-4": {
+                    "schleyer\\bloggy\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "schleyer",
+                    "homepage": "https://developer-website.tld"
+                }
+            ],
+            "description": "Sandbox Plugin for Craft Sandbox",
+            "keywords": [
+                "Sandbox Plugin for Craft Sandbox"
+            ],
+            "support": {
+                "email": "email@developer-website.tld"
+            }
         },
         {
             "name": "marcusschwarz/lesserphp",
