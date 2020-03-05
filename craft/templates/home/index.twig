@@ -7,6 +7,22 @@
     
 
 {% block content %}
+    {{entry.text}}
+
+    {# Bildgröße festlegen #}
+    {% set IMGsize = {
+        mode: 'crop',
+        width: 2500,
+        height: 600,
+        quality: 75,
+        position: 'center-center'
+    } %}
+		
+
+
+    <img src=" {{ entry.image.one().getUrl() }}" style="; margin: 0 auto" class="img-fluid">
+
+
     <h1 class="my-4">Meine Projekte</h1>
     <!-- Marketing Icons Section -->
     <div class="row">
