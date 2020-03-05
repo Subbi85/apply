@@ -17,8 +17,16 @@
         quality: 75,
         position: 'center-center'
     } %}
-	
-    {% set focalPoint = image.focalPoint | default('50% 100%') %}
+	  {{entry.slug}}
+  	{{entry.title}}
+    {{entry.fpHeight}}
+    {{entry.fpWidth}}
+  
+    {% set width = entry.fpWidth~"%" %}{{width}}
+    {% set height = entry.fpHeight~"%" %}{{height}}
+
+
+    {% set focalPoint = image.focalPoint | default(' 60% 30%') %}
     <div class='background' style='background-image: url( {{ entry.image.one().getUrl() }} );
                                     background-position: {{ focalPoint }}; height: 600px'>
     </div>
