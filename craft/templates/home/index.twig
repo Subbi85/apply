@@ -17,20 +17,15 @@
         quality: 75,
         position: 'center-center'
     } %}
-	  {{entry.slug}}
-  	{{entry.title}}
   
     {% set width = entry.fpWidth~"%" %}{{width}}
     {% set height = entry.fpHeight~"%" %}{{height}}
 
-
-    {% set focalPoint = image.focalPoint | default(' 40% 100%') %}
+    {% set focalPoint = image.focalPoint | default( '60% 60%' ) %}
     <div class='background' style='background-image: url( {{ entry.image.one().getUrl() }} );
                                     background-position: {{ focalPoint }}; height: 600px'>
     </div>
   
-    {# <img src=" {{ entry.image.one().getUrl() }}" style="; margin: 0 auto"> #}
-
     <h1 class="my-4">Meine Projekte</h1>
     <!-- Marketing Icons Section -->
     <div class="row">
