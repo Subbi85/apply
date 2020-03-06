@@ -8,27 +8,33 @@
   <meta name="author" content="">
   <title>Lars Schleyer - Sandbox</title>
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ craft.app.sites.primarySite.baseUrl }}vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
-  <link href="css/modern-business.css" rel="stylesheet">
-  <link href="css/mystyle.css" rel="stylesheet">
+  <link href="{{ craft.app.sites.primarySite.baseUrl }}css/modern-business.css" rel="stylesheet">
+  <link href="{{ craft.app.sites.primarySite.baseUrl }}css/mystyle.css" rel="stylesheet">
 </head>
 
 <body>
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.twig">LS - Sandbox</a>
+      <a class="navbar-brand" href="">LS - Sandbox</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="{{ craft.app.sites.primarySite.baseUrl }}aboutme">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="services.html">Services</a>
+            <a class="nav-link" href="{{ craft.app.sites.primarySite.baseUrl }}projekte">Projekte</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ craft.app.sites.primarySite.baseUrl }}cv">Lebenslauf</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ craft.app.sites.primarySite.baseUrl }}kontakt">Kontakt</a>
           </li>
         </ul>
       </div>
@@ -48,16 +54,6 @@
 
     <hr>
 
-    <!-- Call to Action Section -->
-    <div class="row mb-4">
-      <div class="col-md-8">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
-      </div>
-      <div class="col-md-4">
-        <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
-      </div>
-    </div>
-
   </div>
   <!-- /.container -->
 
@@ -66,9 +62,9 @@
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; <a href="http://lars.schleyer-sw.de" target="_blank">lars.schleyer-sw.de</a></p>
       <ul style="list-style:none; color:#ddd">
-        <li class="footer_li">Impressum</li>
-        <li class="footer_li">Datenschutz</li>
-        <li class="footer_li">Sonstiges</li>
+        <a href="{{ craft.app.sites.primarySite.baseUrl }}allgemeines/impressum"><li class="footer_li">Impressum</li></a>
+        <a href="{{ craft.app.sites.primarySite.baseUrl }}allgemeines/datenschutz"><li class="footer_li">Datenschutz</li></a>
+        <a href="{{ craft.app.sites.primarySite.baseUrl }}allgemeines/sonstiges"><li class="footer_li">Sonstiges</li></a>
       </ul>
     </div>
     <!-- /.container -->
