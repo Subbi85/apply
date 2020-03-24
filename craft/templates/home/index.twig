@@ -19,14 +19,20 @@
     } %}
   
     {{entry.title}} - Daten aus dem BE : <br>
-    {% set width = entry.fpWidth~"%" %}{{width}}
-    {% set height = entry.fpHeight~"%" %}{{height}}
+    {% set width = entry.fpWidth %}
+    {% set height = entry.fpHeight %}
 
     {# {% set focalPoint = image.focalPoint | default( '{{ width height }}' ) %} #}
-    {% set focalPoint = image.focalPoint | default( "{{width }}  {{ height }}" ) %}
+
+    {% set focalPoint = image.focalPoint | default( '80% 60%' ) %}
     <div class='background' style='background-image: url( {{ entry.image.one().getUrl() }} );
                                     background-position: {{ focalPoint }}; height: 600px'>
     </div>
+  
+  
+    BILD 2
+
+  
   
     <h1 class="my-4">Meine Projekte</h1>
     <!-- Marketing Icons Section -->
