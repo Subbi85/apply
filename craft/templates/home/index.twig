@@ -9,31 +9,27 @@
 {% block content %}
     {{entry.text}}
 
-    {# Bildgröße festlegen #}
-    {% set IMGsize = {
-        mode: 'crop',
-        width: 2500,
-        height: 600,
-        quality: 75,
-        position: 'center-center'
-    } %}
-  
-    {{entry.title}} - Daten aus dem BE : <br>
-    {% set width = entry.fpWidth %}
-    {% set height = entry.fpHeight %}
 
-    {# {% set focalPoint = image.focalPoint | default( '{{ width height }}' ) %} #}
 
-    {% set focalPoint = image.focalPoint | default( '80% 60%' ) %}
-    <div class='background' style='background-image: url( {{ entry.image.one().getUrl() }} );
-                                    background-position: {{ focalPoint }}; height: 600px'>
-    </div>
-  
-  
-    BILD 2
+{# Focal Points abrufen und anwenden #}
+  {% set image = entry.image.one() %}
+  {% if image.hasFocalPoint %}
+    {% set position = image.getFocalPoint() %}
+    {% set position = position|merge({
+      x: position.x * 100 ~ '%',
+      y: position.y * 100 ~ '%',
+    }) %}
 
-  
-  
+    {% set position = position|join(" ") %}
+  {% else %}
+    {% set position = '50% 50%' %}
+  {% endif %}
+
+  <div class='background' style='background-image:url( {{ image.getUrl() }});background-position:{{ position }};height: 1000px'></div>
+
+  {# Focal Points ENDE #}
+
+
     <h1 class="my-4">Meine Projekte</h1>
     <!-- Marketing Icons Section -->
     <div class="row">
