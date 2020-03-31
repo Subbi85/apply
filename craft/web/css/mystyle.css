@@ -3,3 +3,30 @@
     float:left;
     margin: 10px;
 }
+
+/* Splitscreen */
+
+.split--container{
+    width:100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+}
+
+.split--container-box{
+    height: auto;
+}
+
+#box-image{
+    background-image: url("http://via.placeholder.com/800x600") ;
+    flex-grow: 2;
+}
+
+#box-text{
+    padding-left: 30px;
+    flex-grow: 1;
+}
+
+
+
+/* Splitscreen ENDE */
